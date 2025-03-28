@@ -1,0 +1,229 @@
+
+body {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+footer {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.m0 {
+    margin: 0;
+}
+
+/* Header */
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+}
+
+.flexH {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flexV {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entrar {
+    background-color: black;
+    color: white;
+}
+
+#assineAgora {
+    background-color: rgb(231, 23, 231);
+    color: white;
+    border: rgb(231, 23, 231);
+    border-radius: 4px;
+}
+
+/* Main Content1 */
+
+#content1 {
+    background-color: black;
+    height: 100vh;
+}
+
+#content1images img {
+    height: 10vh;
+    width: 10vh;
+    margin: 20px;
+}
+
+#content1buttonAnimation {
+    background-color: rgb(145, 66, 235);
+    color: white;
+    animation: spinButton 1s linear infinite;
+    animation-delay: 1s;
+    margin-top: 20vh;
+    border-radius: 50vw;
+    height: 10vh;
+    width: 20vw;
+    font-size: 20px;
+}
+
+#content1text1 h2 {
+    font-weight: 200;
+}
+
+#content1text1 h1 {
+    font-weight: 1000;
+}
+
+
+/* Main Content2 */
+
+#content2 {
+    height: 100vh;
+}
+
+#content1text2 h3 {
+    font-weight: 100;
+}
+
+
+.cardsAssinatura {
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.cards {
+    width: 50vh;
+    height: 50vh;
+    background: linear-gradient(rgb(151, 84, 228), transparent);
+    margin-right: 100px;
+    align-items: flex-start;
+    padding: 0px 20px;
+    transition: transform 1s ease-in-out;
+}
+
+.cardsTitle {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.cardsAssinatura:has(.cards:nth-child(1):hover)
+  .cards:nth-child(2) {
+  transform: rotateY(-45deg);
+}
+
+.cardsAssinatura:has(.cards:nth-child(2):hover)
+  .cards:nth-child(1) {
+  transform: rotateY(45deg);
+}
+
+
+/* Main Content3 */
+
+#content3Images {
+    width: 80vw;
+    height: 180vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.imageHover {
+    width: 25vw;
+    height: 80vh;
+    background-size: cover;
+    transition: 2s;
+}
+
+#imageCN {
+    background-image: url("/assets/images/CN-Default.webp");
+}
+
+#imageCN:hover {
+    background-image: url("/assets/images/CN-Hover.png");
+}
+
+#imageDC {
+    background-image: url("/assets/images/DC_Default.webp");
+}
+
+#imageDC:hover {
+    background-image: url("/assets/images/DC-Hover.webp");
+}
+
+#imageHBO {
+    background-image: url("/assets/images/hbo-default_0.webp");
+}
+
+#imageHBO:hover {
+    background-image: url("/assets/images/hbo-hover_0.webp");
+}
+
+#imageMAX {
+    background-image: url("/assets/images/MAX-Default.webp");
+}
+
+#imageMAX:hover {
+    background-image: url("/assets/images/MAX-Hover.webp");
+}
+
+#imageUCL {
+    background-image: url("/assets/images/UCL-Default.webp");
+}
+
+#imageUCL:hover {
+    background-image: url("/assets/images/UCL-Hover.webp");
+}
+
+#imageWB {
+    background-image: url("/assets/images/WB-Default.webp");
+}
+
+#imageWB:hover {
+    background-image: url("/assets/images/WB-Hover.webp");
+}
+
+/* Animações */
+
+@keyframes spinButton {
+    0% {
+        rotate: 0deg;
+    }
+    10%{
+        rotate: 5deg;        
+    }
+    20% {
+        rotate: -5deg;
+    }
+    25% {
+        rotate: 5deg;
+    }
+    30% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+/* Media Queries */
+
